@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Salsalia</string>
+    <string name="login1">Login</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="nama2">Nama :</string>
+    <string name="kembali">Kembali</string>
+    <string name="nama">Nama :</string>
+    <string name="nim2">NIM :</string>
+    <string name="simpan">Simpan</string>
+    <string name="nim">NIM :</string>
+    <string name="nama1">Nama</string>
+    <string name="nim1">NIM</string>
+    <string name="todo">TODO</string>
+    <string name="profile">Profile</string>
+    <string name="rumah_ku">Rumah ku</string>
+</resources>

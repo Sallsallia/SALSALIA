@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--lebar layout memenuhi layar-->
+<!--tinggi layout memenuhi layar-->
+<!--Memberikan jarak tepi menggunakan padding-->
+<!--Memberi background image yang di ambil dari folder drawable-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@drawable/background"
+    android:orientation="horizontal"
+    >
+
+    <!--Membuat lingkarang view imgae menggunakan dipendensi dari hdodenhof -->
+    <!--lebar  137dp-->
+    <!--tinggi 135dp-->
+    <!--memberi jarak atas 40dp-->
+    <!--memberi gambar dari folder drawable-->
+     <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circularImageView"
+        android:layout_width="137dp"
+        android:layout_height="135dp"
+        android:layout_marginStart="40dp"
+        android:src="@drawable/utdi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.394" />
+
+    <!--mengatur tata ukuran pada device android-->
+    <!--memberi intputan email-->
+    <!--dengan id email-->
+    <!--memiliki hint Email-->
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="384dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="104dp"
+        android:hint="Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toEndOf="@+id/circularImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <!--mengatur tata ukuran pada device android-->
+    <!--memberikan tampilan text login-->
+    <!--dengan ukuran 30dp-->
+    <TextView
+        android:layout_width="86dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="252dp"
+        android:text="Login"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.86" />
+
+    <!--mengatur tata ukuran pada device android-->
+    <!--memberi intputan password-->
+    <!--memberikan input type password agar saat menginputkan text di samarkan-->
+    <!--dengan id password-->
+    <!--memiliki hint Password-->
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="384dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="176dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toEndOf="@+id/circularImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <!--mengatur tata ukuran pada device android-->
+    <!--membuat button-->
+    <!--dengan id btn_login-->
+    <!--memberi title button login-->
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="295dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="8dp"
+        android:text="Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.405"
+        app:layout_constraintStart_toEndOf="@+id/circularImageView"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.348" />
+</androidx.constraintlayout.widget.ConstraintLayout>

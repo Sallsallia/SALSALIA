@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--membuat susunan dasar layout dengan constrainLayout-->
+<!--lebar layout memenuhi layar-->
+<!--tinggi layout memenuhi layar-->
+<!--Memberikan jarak tepi menggunakan padding-->
+<!--Memberi background image yang di ambil dari folder drawable-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".activity_profile">
+
+    <!-- memberikan id pada image view-->
+    <!-- menampilkan poto dari folder drawable/potoku-->
+    <!-- Untuk menampilkan image-->
+    <!-- dengan lebar 285dp-->
+    <!-- tinggi 129dp-->
+    <!-- mengambil image dari folder drawabel-->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="285dp"
+        android:layout_height="129dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/potoku"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.116" />
+
+    <!--memberi id untuk linear layout-->
+    <!--mengatur tata ukuran / tampilan  pada device android-->
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="310dp"
+        android:layout_height="48dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.104">
+
+        <!--memberi id untuk nama-->
+        <!--mengatur tata ukuran / tampilan  pada device android-->
+        <!--memberi inputan nama-->
+        <!--mengatur tulisan dengan ukuran 18sp dan bercetak tebal-->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="67dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="36dp"
+            android:text="Nama :"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- memberi intputan nama-->
+        <!-- dengan id et_nama untuk-->
+        <!-- mengatur tata letak ukuran pada device android-->
+        <EditText
+            android:id="@+id/et_nama"
+            android:layout_width="282dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:importantForAutofill="no"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <!--memberi id untuk linear layout-->
+    <!--mengatur tata ukuran / tampilan  pada device android-->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="310dp"
+        android:layout_height="42dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.764">
+
+        <!--mengatur tata ukuran / tampilan  pada device android-->
+        <!--memberi text nim-->
+        <!--dengan ukuran text 18dp-->
+        <!--memberikan text tebal-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:inputType="number"
+            android:text="NIM   : "
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <!--memberikan id pada nim-->
+        <!--memberi intputan nim-->
+        <!--dengan id et_nim-->
+        <EditText
+            android:id="@+id/et_nim"
+            android:layout_width="303dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:importantForAutofill="no"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <!--mengatur ukuran pada layar device android-->
+    <!--memberi title button Simpan-->
+    <!--membuat id button, berfungsi menjalankan fungsi yang ada di class kotlin-->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="234dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="16dp"
+        android:text="Simpan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.247"
+        tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

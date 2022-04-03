@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".activity_profile_parsing_data">
+
+    <!--memberikan id pada image view-->
+    <!-- menampilkan poto dari folder drawable/potoku-->
+    <!-- Untuk menampilkan image-->
+    <!-- dengan lebar 234dp-->
+    <!-- tinggi 135dp-->
+    <!-- mengambil image dari folder drawabel-->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="234dp"
+        android:layout_height="135dp"
+        android:src="@drawable/potoku"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.116" />
+
+    <!--membuat button-->
+    <!--dengan id button-->
+    <!--memberi title button kembali-->
+    <!--dengan lebar 234dp-->
+    <!--tinggi 54dp-->
+    <!--membuat id button, berfungsi menjalankan fungsi yang ada di class kotlin-->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="234dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="16dp"
+        android:text="Kembali"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!--memberi id untuk linear layout-->
+    <!--mengatur tata ukuran / tampilan  pada device android-->
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="520dp"
+        android:layout_height="35dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.028">
+
+        <!--memberikan id pada tevt view-->
+        <!--memberikan tampilan text nama-->
+        <!--dengan ukuran 18dp-->
+        <!--memberikan text tebal-->
+        <!--letak texview berada di bawah image-->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:text="Nama : "
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.181" />
+
+        <!--memberikan id pada tevt view-->
+        <!--memberikan tampilan text nama-->
+        <!--dengan ukuran 18dp-->
+        <!--memberikan text tebal-->
+        <!--letak texview berada di bawah image-->
+        <TextView
+            android:id="@+id/tv_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    </LinearLayout>
+
+    <!--memberi id untuk linear layout-->
+    <!--mengatur tata ukuran / tampilan  pada device android-->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="515dp"
+        android:layout_height="27dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll1"
+        app:layout_constraintVertical_bias="0.081">
+
+        <!--mengatur tata ukuran pada device android-->
+        <!--memberikan tampilan text Nim-->
+        <!--dengan ukuran 18dp-->
+        <!--memberikan text tebal-->
+        <!--letak texview berada di bawah inputan nama-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:text="NIM    : "
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nama" />
+
+        <!--memberikan tampilan text Nim-->
+        <!--memiliki id tv_nim-->
+        <!--dengan ukuran 18dp-->
+        <!--memberikan text tebal-->
+        <!--memberikan jarak dari tepi kiri 36dp-->
+        <!--letak texview berada di bawah inputan nama-->
+        <TextView
+            android:id="@+id/tv_nim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nama" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
